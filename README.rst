@@ -1,7 +1,9 @@
 Nozzle
 ======
 
-(Even more) Simpler nose tests.
+(Even more) Quick* and simple nose tests!
+
+(*) Quick as in quick to write
 
 
 Installation
@@ -59,11 +61,12 @@ Now we add tests using nozzle,
 Explanation
 ~~~~~~~~~~~
 
-Here, we have defined three functions each returning an interable of
+Here, we have defined three functions each returning an iterable of
 tuples. ``nozzle`` provides ``gentests``, a function that takes as
 input, the main function to be tested and returns a decorator. The
-tuples are n-tuples such that the first ``n-1`` items are the input to
-the function to be tested and the last element is the expected output.
+tuples are n-tuples such that the first ``n-1`` items are the
+arguments to be passed to the function to be tested and the last
+element is the expected output.
 
 ``gentests`` optionally take as second argument, a function that
 handles assertions. It's passed two args, the result and the expected
@@ -73,7 +76,7 @@ that the result is equal to the expected value.
 Those familiar with nose must have already figured out that the
 decorator converts the function into a `test generator
 <http://nose.readthedocs.org/en/latest/writing_tests.html#test-generators>`_
-that yields tests from the returned interable. So the above test code
+that yields tests from the returned iterable. So the above test code
 will yield 8 tests as follows,
 
 .. code-block:: bash
@@ -101,10 +104,10 @@ Alerts!
 -------
 
 * This is highly experimental stuff so use with caution.
-* It's one of those libs that make simple things simpler, but with a
-  possibility of making difficult things impossible to achieve! You
-  can still fallback to writing normal assertions based test functions
-  or class based testcases (unittest).
+* It may turn out to be one of those libs that make simple things
+  simpler, but with a possibility of making difficult things
+  impossible to achieve!  You can still fallback to writing normal
+  assertions based test functions or class based testcases (unittest).
 
 
 LICENSE
